@@ -1,0 +1,12 @@
+body {
+    color: #222;
+    font-family: sans-serif;
+}
+
+div{
+    background-color: #000;
+    color: white;
+    border: 5px solid red;
+}
+
+

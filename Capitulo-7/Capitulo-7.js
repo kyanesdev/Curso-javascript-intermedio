@@ -66,11 +66,29 @@ let youtubeURL = "http://youtube.com";
 
 //Historia de cofla cap 7 - Ejercicio 1
 
-let alto = window.screen.availHeight;
-let ancho = window.screen.availWidth;
+//let alto = window.screen.availHeight;
+//let ancho = window.screen.availWidth;
 
-comprar = confirm(`El alto es de ${alto}` + ` y el ancho es de ${ancho}`);
+//comprar = confirm(`El alto es de ${alto}` + ` y el ancho es de ${ancho}` + ` la compras ?`);
 
-if(comprar){
-    alert("compra realizada exitosamente");
-}
+//if(comprar){
+//    alert("compra realizada exitosamente");
+//}else{
+//    alert("compra cancelada");
+//}
+
+//Historia de cofla cap 7 - Ejercicio 2
+
+/*let Href = window.location.href;
+let pathName = window.location.pathname;
+let Protocol = window.location.protocol;
+let Hostname = window.location.hostname;
+
+document.write(`El href es ${Href}`);
+document.write("<br>");
+document.write(`El href es ${Hostname}`); 
+document.write("<br>");
+document.write(`El href es ${pathName}`); 
+document.write("<br>");
+document.write(`El href es ${Protocol}`); 
+*/
