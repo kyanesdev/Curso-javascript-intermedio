@@ -93,3 +93,46 @@ boton.addEventListener("click",(e)=>{
 //-----------------------------------------------------------------------------------------
 
 // https://www.w3schools.com/jsref/dom_obj_event.asp
+
+//-----------------------------------------------------------------------------------------
+
+// Historia de Cofla Cap. 9
+
+//Ejercicio A
+
+const nombre = document.getElementById("nombre");
+const email = document.getElementById("email");
+const materia = document.getElementById("materia");
+const botonsito = document.getElementById("boton-enviar");
+
+const resultado = document.querySelector(".resultado");
+
+botonsito.addEventListener("click",(e)=>{
+    e.preventDefault(); //Evita que se envien los datos , esto está por defecto.
+    let error = validarCampos();
+    if(error[0]){ //Acá resulta que le pasas el dato de que si el error es true, se ejecuta el if
+        resultado.innerHTML = error[1];
+        resultado.classList.add("rojo");
+    }else{
+        resultado.innerHTML = "solicitud enviada correctamente";
+        resultado.classList.add("verde");
+    }
+})
+
+const validarCampos = ()=>{
+    let error = [];
+    if(nombre.value.length < 5){
+        error[0] = true;
+        error[1] = "El nombre no puede contener menos de 5 caracteres";
+        return error;
+    }else if(nombre.value.length > 40){
+        error[0] = true;
+        error[1] = "El nombre no puede contener mas de 40 caracteres";
+        return error;
+    }
+
+    //aca harian falta las otras validaciones
+    error[0] = false;
+    return error;
+
+}
