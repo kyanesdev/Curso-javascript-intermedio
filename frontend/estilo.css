@@ -1,4 +1,10 @@
 * {
   background-color: lightblue;
 }
+
+#nombre {
+  font-size: 25px;
+  margin: 100px;
+  border-radius: 30px;
+}
 /*# sourceMappingURL=estilo.css.map */

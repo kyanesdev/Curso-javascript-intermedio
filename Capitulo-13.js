@@ -54,7 +54,7 @@
 
 // peticion.addEventListener("load",()=>{
 //         let respuesta;
-       
+
 //         if(peticion.status == 200){
 //                 respuesta = peticion.response;
 //         }else{
@@ -64,7 +64,7 @@
 //         respuesta = JSON.parse(respuesta);
 
 //         console.log(respuesta);
-    
+
 // })
 
 // peticion.open("GET","informacion.txt");
@@ -92,21 +92,40 @@
 
 //const axios = require('axios').default;
 
-axios("/public/info.txt")
-        .then(res=>console.log(res.data));
+// axios("/public/info.txt")
+//         .then(res=>console.log(res.data));
 
-axios.post("https://reqres.in/api/users", {
-        "nombre": "angelo",
-        "apellido": "manfredi"
-})
-        .then(res=>console.log(res.data));
+// axios.post("https://reqres.in/api/users", {
+//         "nombre": "angelo",
+//         "apellido": "manfredi"
+// })
+//         .then(res=>console.log(res.data));
 //------------------------------------------------------------------
 
-const getName = async()=>{
-        let peticion = await fetch("/public/info.txt");
-        let resultado = await peticion.json();
+// const getName = async()=>{
+//         let peticion = await fetch("/public/info.txt");
+//         let resultado = await peticion.json();
+//         let HTMLCode = `Nombre: ${resultado.nombre}
+//                         <br>Edad: ${resultado.edad}`
 
+//         document.querySelector(".resultado").innerHTML = HTMLCode;
+//         //console.log(resultado);
+// }
+
+// //getName();
+
+// document.getElementById('nombre').addEventListener("click",getName);
+
+//------------------------------------------------------------------
+//import axios from 'axios'
+//const axios = require('axios').default;
+//const cors = require('cors');
+
+
+const getInfo = async () => {
+        resultado = await axios.get("https://vast-oasis-68762.herokuapp.com/api/notes");
+        resultado = resultado.data;
         console.log(resultado);
 }
 
-getName();
+document.getElementById("nombre").addEventListener("click",getInfo);
